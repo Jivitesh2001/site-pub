@@ -1,0 +1,25 @@
+name: My GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Step with my email address 21f3002782@ds.study.iitm.ac.in
+        run: |
+          echo "This step contains my email address"
+          
+      - name: Run a script
+        run: |
+          echo "Running a custom script"
+
